@@ -101,4 +101,4 @@ do_not = "don't"
 y=f"1 knows {binary} and 1 {do_not}"
 print(x)
 print(y)
-print(f"I said: {X}")
+print(f"I said: {x}")
