@@ -102,3 +102,33 @@ y=f"1 knows {binary} and 1 {do_not}"
 print(x)
 print(y)
 print(f"I said: {x}")
+print(f"I also said :'{y}'")
+hilarious=False
+joke_valuation="isn't that joke so funny?!{}"
+print(joke_valuation.format(hilarious))
+w = "this is 1 \n "
+r="this is 2"
+print(w+r)
+#ex7***************more printing**********
+print("My child's legs are white as {}".format("snow"))
+
+print("end 7")
+#ex8********** string formatting********
+formatter = "{} {} {} {}"
+print(formatter.format(1,2,3,4))
+print(formatter.format("one","two","three","four"))
+print(formatter.format(True,False,True,True))
+print(formatter.format(formatter,formatter,formatter,formatter))
+
+print("end 8\n")
+
+#ex9*********
+Days="Mon\nTue\nWed"
+print(Days)
+print("""Hidog""")
+print("end previous ex\n")
+#ex10************escape sequences****
+print("i am 5'1\" tall")
+print('i am 5\'1" tall')
+print("""i am 5'1" tall""")
+print("end previous ex\n")
