@@ -5,6 +5,7 @@ Created on Fri Mar 27 15:47:38 2020
 @author: Prakash
 """
 
+#path*******C:\Users\Prakash\github\lpthw
 
 #************python 2 exercises************
 print ("Hello")#ts
@@ -20,7 +21,7 @@ a = 'prakas'
 print(a
       )
 
-# format string python 2####++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# format string python 2####++++++++++++++++++++++++++++++++++++++++++++++++
 print("lts talk abt or %s." %a)
 
 print("i av %d cars and %d spr cars" %(cars,spr_cars))
@@ -132,3 +133,17 @@ print("i am 5'1\" tall")
 print('i am 5\'1" tall')
 print("""i am 5'1" tall""")
 print("end previous ex\n")
+#ex11************taking input*******
+#end=' '***tell print to not end the line with a newline character
+print("How old?",end=' ')
+#age=input()
+print("How tall?",end=' ')
+#height=input()
+#print(f"so,you are {age} old and {height} tall")
+#print("end previous ex\n")
+#int(input())*******get number as string and converts to int
+#ex12**********
+print("\n ex 11")
+age=input("How old?\t")
+height=input("How tall ")
+print(f"so,you are {age} and {height} tall")
