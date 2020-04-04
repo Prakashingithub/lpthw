@@ -239,24 +239,109 @@ from sys import argv #to run**** python ex.py text.txt
 # target.close()
 
 print("end previous ex16\n")
-#ex17*****
+#ex17*****read , write files*******
 from sys import argv
 from os.path import exists
+#
+# script, from_file, to_file = argv
+# print(f"copy from {from_file} to {to_file}")
+# in_file=open(from_file)
+# indata=in_file.read()
+#
+# print(f"The input file is {len(indata)} bytes long")
+#
+# print(f"Does the output file exists? {exists(to_file)}")
+# print("Ready, hit return to continue, CTRL-C to abort.")
+# input()
+#
+# out_file = open(to_file,'w')
+# out_file.write(indata)
+#
+# print("Alright,all done")
+# out_file.close()
+# in_file.close()
 
-script, from_file, to_file = argv
-print(f"copy from {from_file} to {to_file}")
-in_file=open(from_file)
-indata=in_file.read()
+print("end previous ex17\n")
 
-print(f"The input file is {len(indata)} bytes long")
+#ex18******Functions******
+#this one is like your scripts with argv
+def print_two(*args):
+    arg1, arg2 = args
+    print(f"arg1:{arg1}, arg2: {arg2}")
 
-print(f"Does the output file exists? {exists(to_file)}")
-print("Ready, hit return to continue, CTRL-C to abort.")
-input()
+#ok, that *args is actually pointless, we can just do this
+def print_two_again(arg1,arg2):
+    print(f"arg1:{arg1}, arg2: {arg2}")
 
-out_file = open(to_file,'w')
-out_file.write(indata)
+#this just takes one argument
+def print_one(arg1):
 
-print("Alright,all done")
-out_file.close()
-in_file.close()
+    print(f"arg1: {arg1}")
+
+#this one takes no argument
+def print_none():
+    print("i got nothing")
+
+print_two("apple","pie")
+print_two_again("a","b")
+print_one("1")
+print_none()
+
+print("end previous ex18\n")
+#ex19********Functions , variables*****
+
+def add(x,y):
+    print(x+y)
+
+x=986454654
+y=1
+add(x,y)
+add(1,9856)
+
+print("end previous ex19\n")
+#ex20********Functions&files********
+from sys import argv
+
+# script, input_file=argv
+#
+# def print_all(f):
+#     print(f.read())
+#
+# def rewind(f):
+#     f.seek(0)
+
+# def print_a_line(line_count, f): #add end=" " to skip reading blank line
+#     print(line_count, f.readline())
+#
+# current_file= open(input_file)
+# print("print whole file:\n")
+# print_all(current_file)
+# print("lets rewind\n")
+# rewind(current_file)
+# print("lets print 3 lines:\n")
+# current_line=1
+# print_a_line(current_line,current_file)
+# current_line=current_line+1
+# print_a_line(current_line,current_file)
+# #f.readline() --reads a line and moving the read head to right after \n
+# current_line=current_line+2
+# #it gives the line_count as +2 but reads the line after \n
+# print_a_line(current_line,current_file)
+
+print("end previous ex20\n")
+
+#ex21***********Functions***
+def add(x,y):
+    print(f"adding {x} + {y}")
+    return x+y
+
+print(add(5,6))
+
+def sub(x,y):
+    return x-y
+
+print(sub(6,9))
+
+print("end previous ex21\n")
+#ex22*****# REVIEW:
+#ex23*****
