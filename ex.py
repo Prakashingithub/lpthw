@@ -403,3 +403,38 @@ print("We'd have {} beans and {} jars.".format(*formula))
 
 print("end previous ex24\n")
 #ex25*******
+####sentence="All good things come to those who wait"
+def break_words(sentence):
+    """Function will break_words"""
+    words=sentence.split(' ')
+    return words
+
+def sort_words(words):
+    """sort the words"""
+    return sorted(words)
+
+def print_first_word(words):
+    """print first word"""
+    word=words.pop(0)
+    print(word)
+
+def print_last_word(words):
+    word=words.pop(-1)
+    print(word)
+
+def sort_sentence(sentence):
+    """takes full sentence and rturns sorted words"""
+    words=break_words(sentence)
+    return sort_words(words)
+
+def print_first_and_last(sentence):
+    words=break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+def print_first_and_last_sorted(sentence):
+    words=sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+print("end previous ex25\n")
