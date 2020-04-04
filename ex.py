@@ -344,4 +344,62 @@ print(sub(6,9))
 
 print("end previous ex21\n")
 #ex22*****# REVIEW:
-#ex23*****
+#ex23*****string,bytes,character encoding
+#####run as***-python ex.py utf-8 strict
+#####can also test using -ex.py utf-16 strict /ex.py utf-32 strict
+#####while using big5 --ex.py big5 strict
+####ex.py big5 replace
+# import sys
+# script, encoding, error = sys.argv
+#
+#
+# def main(language_file,encoding,errors):
+#     line = language_file.readline()
+#
+#     if line:
+#         print_line(line,encoding,errors)
+#         return main(language_file,encoding,errors)
+#
+# def print_line(line,encoding,errors):
+#     next_lang = line.strip()
+#     raw_bytes = next_lang.encode(encoding,errors=errors)
+#     cooked_string = raw_bytes.decode(encoding,errors=errors)
+#
+#     print(raw_bytes, "<===>", cooked_string)
+#
+# languages = open("languages2.txt", encoding="utf-8")
+# ##### languages = open("languages.txt", encoding="ANSI")
+# main(languages, encoding, error)
+
+print("end previous ex23\n")
+#ex24*****
+print("Practice")
+print('You\'d need to know \'bout escapes with \\ that do:')
+print('\n newlines and \t tabs.')
+
+poem = """\tThe lovely world \n needs love\n\twhere there is none."""
+print("----------")
+print(poem)
+print("----------")
+
+five=10-2+3-6
+
+print(f"This should be five: {five}")
+
+def secret_formula(started):
+    Jelly_beans = started*500
+    Jars = Jelly_beans/1000
+    return Jelly_beans, Jars
+
+value=10000
+beans, jars = secret_formula(value)
+#another way to format string
+print("With a starting value of: {}".format(value))
+print(f"we'd have {beans} beans and {jars} jars.")
+
+value=value/10
+formula=secret_formula(value)
+print("We'd have {} beans and {} jars.".format(*formula))
+
+print("end previous ex24\n")
+#ex25*******
