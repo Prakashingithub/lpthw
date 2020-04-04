@@ -144,6 +144,119 @@ print("How tall?",end=' ')
 #int(input())*******get number as string and converts to int
 #ex12**********
 print("\n ex 11")
-age=input("How old?\t")
-height=input("How tall ")
-print(f"so,you are {age} and {height} tall")
+#age=input("How old?\t")
+#height=input("How tall ")
+#print(f"so,you are {age} and {height} tall")
+#ex13*****argv***************************
+from sys import argv
+#read the WYSS section for how to run this
+#run it like****python ex.py 1st 2nd 3rd****
+#script, first, second, third = argv
+#print("The script is called:", script)
+#print("your first variable is:", first)
+#print("second var is:", second)
+#print("third variable is:", third)
+
+#ex14*****argv***************************
+from sys import argv
+#run it like*****python ex.py(scriptname) user_name
+#script, user_name = argv
+#prompt = '>'
+
+#print(f"Hi {user_name}, i'm the {script} script.")
+#print("I'd like to ask you a few questions.")
+#print(f"Do you like me {user_name}?")
+#likes = input(prompt)
+
+#print(f"where do you live {user_name}?")
+#lives = input(prompt)
+
+#print("what kind of computer do you have?")
+#computer = input(prompt)
+
+#print(f"""Alright, so you said {likes} about liking me.You live in {lives}.
+#Not sure where that is. And you have a {computer} computer. Nice.""")
+
+print("end previous ex14\n")
+
+#ex15******read file
+from sys import argv
+#simple command*****start
+#run as***python ex.py ex.py
+# script, filename = argv
+# txt = open(filename)
+
+# print(txt.read())
+#simple command*****end
+#as per exercises****
+# script, filename = argv
+# txt = open(filename)
+
+# print(f"Here's your file {filename}:")
+# print(txt.read())
+# print("Type the filename again:")
+# file_again = input("> ")
+#
+# txt_again = open(file_again)
+#
+# print(txt_again.read())
+# print(open(ex.py).read())
+
+print("end previous ex14\n")
+
+#ex16********read and write****
+from sys import argv #to run**** python ex.py text.txt
+
+# script,filename=argv
+# print(f"to erase {filename}")
+####### print("to erase yes, hit CTRL-C (^C).") #not working
+####### print("to erase no, hit return.") #not working
+####### input("?") #not working
+# print("open file")
+# target=open(filename,'w') #open file in write mode
+# print(target.read())
+# print("truncating file")
+# target.truncate()
+# print("need lines")
+# line1=input("line 1: ")
+# line2=input("line 2: ")
+# line3=input("line 3: ")
+#
+# print("to write these lines")
+#
+# target.write(line1)
+# target.write("\n")
+# target.write(line2)
+# target.write("\n")
+# target.write(line3)
+# target.write("\n")
+# target.write(f"{line1}+\n+ {line2}+ \n +{line3}+'that\'s right'")
+# target.write(f"""\n{line1} {line2} {line3} that\'s right""")
+# target.write(f"\n{line1} {line2} {line3}\t-that\'s right")
+# target=open(filename,'r')
+# print(target.read())
+# print("close file")
+# target.close()
+
+print("end previous ex16\n")
+#ex17*****
+from sys import argv
+from os.path import exists
+
+script, from_file, to_file = argv
+print(f"copy from {from_file} to {to_file}")
+in_file=open(from_file)
+indata=in_file.read()
+
+print(f"The input file is {len(indata)} bytes long")
+
+print(f"Does the output file exists? {exists(to_file)}")
+print("Ready, hit return to continue, CTRL-C to abort.")
+input()
+
+out_file = open(to_file,'w')
+out_file.write(indata)
+
+print("Alright,all done")
+out_file.close()
+in_file.close()
