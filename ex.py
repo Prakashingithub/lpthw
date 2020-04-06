@@ -403,3 +403,66 @@ print("We'd have {} beans and {} jars.".format(*formula))
 
 print("end previous ex24\n")
 #ex25*******
+####sentence="All good things come to those who wait"
+def break_words(sentence):
+    """Function will break_words"""
+    words=sentence.split(' ')
+    return words
+
+def sort_words(words):
+    """sort the words"""
+    return sorted(words)
+
+def print_first_word(words):
+    """print first word"""
+    word=words.pop(0)
+    print(word)
+
+def print_last_word(words):
+    word=words.pop(-1)
+    print(word)
+
+def sort_sentence(sentence):
+    """takes full sentence and rturns sorted words"""
+    words=break_words(sentence)
+    return sort_words(words)
+
+def print_first_and_last(sentence):
+    words=break_words(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+def print_first_and_last_sorted(sentence):
+    words=sort_sentence(sentence)
+    print_first_word(words)
+    print_last_word(words)
+
+print("end previous ex25\n")
+
+#ex31*************
+print("""You enter a dark room with two doors.Do you go through door #1 or door #2? """)
+door =input("> ")
+if door=="1":
+    print("There's a giant bear eating a cheese cake.")
+    print("what do you do?")
+    print("1.Take the cake \n 2.Scream at the bear")
+    bear=input("> ")
+    if bear == "1":
+        print("The bear eats you")
+    elif bear == "2":
+        print("The bear eats your leg")
+    else:
+        print(f"Well, doing {bear} is probably better")
+        print("Bear runs away")
+elif door=="2":
+    print("You stare into the endless abyss at Cthulhu's retina.")
+    print("1.Blueberries\n2.Yellow jacket clothespins\n3.Understanding revolvers yelling melodies.")
+    insanity = input("> ")
+    if insanity =="1"or insanity == "2":
+        print("Your body survives powered by a mind of jello.")
+    else:
+        print("The insanity rots your eyes into muck.")
+else:
+    print("Good job!")
+
+print("end previous ex31\n")
