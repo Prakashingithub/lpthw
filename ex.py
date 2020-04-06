@@ -438,6 +438,7 @@ def print_first_and_last_sorted(sentence):
     print_last_word(words)
 
 print("end previous ex25\n")
+<<<<<<< HEAD
 
 #ex31*************
 print("""You enter a dark room with two doors.Do you go through door #1 or door #2? """)
@@ -466,3 +467,5 @@ else:
     print("Good job!")
 
 print("end previous ex31\n")
+=======
+>>>>>>> 80c26f9d6bf4bc72fe3046fcba59ce6b08313828
