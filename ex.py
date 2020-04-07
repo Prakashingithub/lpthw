@@ -438,34 +438,286 @@ def print_first_and_last_sorted(sentence):
     print_last_word(words)
 
 print("end previous ex25\n")
-<<<<<<< HEAD
 
 #ex31*************
-print("""You enter a dark room with two doors.Do you go through door #1 or door #2? """)
-door =input("> ")
-if door=="1":
-    print("There's a giant bear eating a cheese cake.")
-    print("what do you do?")
-    print("1.Take the cake \n 2.Scream at the bear")
-    bear=input("> ")
-    if bear == "1":
-        print("The bear eats you")
-    elif bear == "2":
-        print("The bear eats your leg")
-    else:
-        print(f"Well, doing {bear} is probably better")
-        print("Bear runs away")
-elif door=="2":
-    print("You stare into the endless abyss at Cthulhu's retina.")
-    print("1.Blueberries\n2.Yellow jacket clothespins\n3.Understanding revolvers yelling melodies.")
-    insanity = input("> ")
-    if insanity =="1"or insanity == "2":
-        print("Your body survives powered by a mind of jello.")
-    else:
-        print("The insanity rots your eyes into muck.")
-else:
-    print("Good job!")
+# print("""You enter a dark room with two doors.Do you go through door #1 or door #2? """)
+# door =input("> ")
+# if door=="1":
+#     print("There's a giant bear eating a cheese cake.")
+#     print("what do you do?")
+#     print("1.Take the cake \n 2.Scream at the bear")
+#     bear=input("> ")
+#     if bear == "1":
+#         print("The bear eats you")
+#     elif bear == "2":
+#         print("The bear eats your leg")
+#     else:
+#         print(f"Well, doing {bear} is probably better")
+#         print("Bear runs away")
+# elif door=="2":
+#     print("You stare into the endless abyss at Cthulhu's retina.")
+#     print("1.Blueberries\n2.Yellow jacket clothespins\n3.Understanding revolvers yelling melodies.")
+#     insanity = input("> ")
+#     if insanity =="1"or insanity == "2":
+#         print("Your body survives powered by a mind of jello.")
+#     else:
+#         print("The insanity rots your eyes into muck.")
+# else:
+#     print("Good job!")
 
 print("end previous ex31\n")
-=======
->>>>>>> 80c26f9d6bf4bc72fe3046fcba59ce6b08313828
+##ex32**************for loop******
+the_count = [1,2,3,4,5]
+fruits = ['apple','orange','banana','mango']
+change = [1,'pennies',2,'dimes',3,'quarters']
+
+for number in the_count:
+    print(f"This is count {number}")
+
+for fruits in fruits :
+    print(f"A fruit type:{fruits}")
+
+for i in change:
+    print(f"I got {i}")
+
+elements = []
+for x in range(0,6):
+    print(f"adding {x} to the list")
+    elements.append(x)
+print(elements)
+for i in elements:
+    print(f" element was {i}")
+
+print("end previous ex32\n")
+
+#ex33****while loop*****
+i=0
+numbers = []
+
+while i<6:
+    print(f"At the top i is {i}")
+    numbers.append(i)
+    print("numbers now:", numbers)
+    i = i + 1
+    print(f"At the bottom i is {i}")
+
+print("The numbers: ")
+
+for num in numbers:
+    print(num)
+
+def while_loop(i):
+    numbers = []
+    while i<6:
+        print(f"At the top i is {i}")
+        numbers.append(i)
+        print("numbers now:", numbers)
+        i = i + 1
+        print(f"At the bottom i is {i}")
+    print("The numbers: ")
+    for num in numbers:
+        print(num)
+
+jars = [1,2,3,4,5]
+
+for cakes in jars:
+    while_loop(cakes)
+
+print("-----------------------end previous ex33-------------------------\n")
+
+#ex35*********
+
+from sys import exit
+#
+# def int_test(x):
+#     try:
+#         int(x)
+#         #print("*True*")   #just to check output
+#         return True
+#     except ValueError:
+#         #print("*False*")   #just to check output
+#         return False
+#
+# def gold_room():
+#     print("This room is full of gold. How much do you take?")
+#     choice = input("> ")
+#     if int_test(choice):   #This will execute if the Function returns True
+#         print("converting choice as integer.")
+#         how_much=int(choice)
+#         print(f"{choice}! good, it is a number")
+#         if how_much < 50:
+#             print("Nice, you are not greedy.")
+#             exit(0)
+#         else:
+#             dead("greedy.")
+#     else:
+#         print(f"{choice}! Man, type a number.")
+#         exit(0)
+#
+#
+# def bear_room():
+#     print("Bear here.")
+#     print("Bear has a bunch of honey.\nThe fat bear is in front of door.\n")
+#     print("How are you going to move the bear?")
+#     bear_moved = False
+#
+#     while True:
+#         choice = input("> ")
+#         if choice == "take honey":
+#             dead("The bear slaps you.")
+#         elif choice == "taunt bear" and not bear_moved:
+#             print("Bear has moved form the door.")
+#             print("You can go through it now.")
+#             bear_moved=True
+#         elif choice == "taunt bear" and bear_moved:
+#             dead("The bear gets pissed off and chews your leg off.")
+#         elif choice == "open door" and bear_moved:
+#             gold_room()
+#         else:
+#             print("I got no idea what that means.")
+#
+# def cthulhu_room():
+#     print("Here you see the great evil Cthulhu.")
+#     print("He, it, whatever stares at you and you go insane.")
+#     print("Do you flee for your life or eat your head?")
+#
+#     choice = input("> ")
+#
+#     if "flee" in choice:
+#         strart()
+#     elif "head" in choice:
+#         dead("Well that was tasty!")
+#     else:
+#         cthulhu_room()
+#
+# def dead(why):
+#     print(why, "Good job!")
+#     exit(0)
+#
+# def start():
+#     print("You are in a dark room.")
+#     print("There is a door to your right and left.")
+#     print("Which one do you take?")
+#
+#     choice = input("> ")
+#
+#     if choice == "left":
+#         bear_room()
+#     elif choice == "right":
+#         cthulhu_room()
+#     else:
+#         dead("You stumble around the room untill you starve.")
+#
+# start()
+
+print("-----------------------end previous ex35-------------------------\n")
+
+#ex38****************************
+ten_things = "apple orange crows telephone light sugar"
+
+print("Wait there are not 10 things. lets fix")
+
+stuff=ten_things.split(' ')  #split using spaces
+more_stuff = ["Day", "Night","Song","Frisbee","corn","banana","girl","boy"]
+
+while len(stuff) !=10:
+    next_one = more_stuff.pop()
+    print("Adding: ", next_one)
+    stuff.append(next_one)
+    print(f"There {len(stuff)} items now.")
+
+
+print("There we go: ", stuff)
+print("lets do somethings with stuff.")
+
+print(stuff[1])
+print(stuff[-1])  #fancy
+print(stuff.pop())
+print(' '.join(stuff)) #cool? join with spaces
+print('#'.join(stuff[3:5])) #super stellar!
+
+ten_things = "2apple 2orange 2crows 2telephone 2light 2sugar"
+
+print("Wait there are not 10 things. lets fix")
+
+stuff=ten_things.split(' ')  #split using spaces
+more_stuff = ["2Day", "2Night","2Song","2Frisbee","2corn","2banana","2girl","2boy"]
+
+for i in stuff:
+    i=len(stuff)+1
+    if i>10:
+        break
+    else:
+        next_one = more_stuff.pop()
+        print("Adding: ", next_one)
+        stuff.append(next_one)
+        print(f"There {len(stuff)} items now.")
+
+print("There we go: ", stuff)
+print("lets do somethings with stuff.")
+
+print(stuff[1])
+print(stuff[-1])  #fancy
+print(stuff.pop())
+print(' '.join(stuff)) #cool? join with spaces
+print('#'.join(stuff[3:5])) #super stellar!
+
+
+print("-----------------------end previous ex38-------------------------\n")
+
+#ex9****************
+
+#creating a mapping of state to abbreviation
+states ={'oregon':'OR','florida':'FL','california':'CA','newyork':'NY','michigan':'MI'}
+
+#create a basic set of states and some cities in them
+cities={'CA':'San fransisco','MI':'Detroit','FL':'Jacksonville'}
+
+cities['NY']='newyork'
+cities['OR']='Portland'
+
+#print out some cities
+print('-'*10)
+print("NY state has:", cities['NY'])
+print("OR state has:",cities['OR'])
+
+#print some states
+print('-'*10)
+print("Michigan's abbreviation is :",states['michigan'])
+print("Florida's abbreviation is:",states['florida'])
+
+#do it by using the state and cities dict
+print('-'*10)
+print('Michigan has:',cities[states['michigan']])
+print('Florida has:',cities[states['florida']])
+
+#print every state abbreviation
+print('-'*10)
+for state,abbrev in list(states.items()):
+    print(f"{state} state is abbreviated {abbrev}")
+
+for abbrev,city in list(cities.items()):
+    print(f"{abbrev} has the city {city}")
+
+print('-'*10)
+for state,abbrev in list(states.items()):
+    print(f"{state} state is abbreviated {abbrev}")
+    print(f"and has city {cities[abbrev]}")
+
+print('-'*10)
+#safely get a abbreviation by state that might not be there
+state=states.get('texas')
+if not state:
+    print("Sorry, no texas.")
+
+state=states.get('michigan')  #states['michigan']
+if not state:
+    print("Sorry, no michigan.")
+else:
+    print(state)
+
+#get a city with a default value
+city=cities.get('TX','Does not exists')
+print(f"The city for the state 'TX' is:{city}")
+
+print("-----------------------end previous ex39-------------------------\n")
