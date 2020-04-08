@@ -721,3 +721,169 @@ city=cities.get('TX','Does not exists')
 print(f"The city for the state 'TX' is:{city}")
 
 print("-----------------------end previous ex39-------------------------\n")
+
+#ex40*******************
+class Song(object):
+    """docstring for Song."""
+
+    def __init__(self, lyrics):
+        #super(Song, self).__init__()
+        self.lyrics = lyrics
+    def sing_me_a_song(self):
+        for line in self.lyrics:
+            print(line)
+
+
+happy_bday=Song(["Happy Birthday to you",
+                    "I don't want to get sued",
+                    "So I'll stop right there"])
+print(happy_bday)
+print("\nlline747")
+
+bulls_on_parade=Song(["They rally around the family",
+                        "With pockets full of shells"])
+print(bulls_on_parade)
+happy_bday.sing_me_a_song()
+print("\nline755")
+bulls_on_parade.sing_me_a_song()
+
+#test
+def song2(x):
+    for line in x:
+        print(line)
+
+object=["This is testing",
+                    "python",
+                    "in atom terminal"]
+song2(object)
+print("\nlin767")
+print(object)
+print("\nlin769")
+print(song2)
+print("\nlin771")
+for x in object:
+    print(x)
+
+#test using examples
+
+class employee():
+    pass
+
+emp1=employee()
+emp2=employee()
+
+print(emp1)
+print(emp2)
+
+## output--
+## __main__.employee object at 0xxxxxxxmmmm
+## __main__.employee object at 0yyyyyyzzzzz
+## two unique instances are Created
+print("to test")
+class employee():
+    """docstring for employee."""
+
+    def __init__(self, first,last,pay):
+        self.first = first
+        self.last = last
+        self.pay = pay
+        self.email = first + '.' + last + '@ashokleyland.com'
+        self.fullName=first +" "+ last
+    def full_name(self):
+        return '{} {}'.format(self.first,self.last)
+
+emp1=employee("prakash","m","45000")
+
+print("lin797")
+print(emp1.full_name())
+print(employee.full_name(emp1))
+print(emp1.fullName)
+#### print(employee.fullName(emp1)) ##error
+print(emp1.email)
+print(emp1.last)
+
+print("lin805")
+
+class MyStuff():
+
+    def __init__(self):
+        self.tangerine = "And now a thousand years"
+
+    def apple(self):
+        print("I am classy apples!")
+        print("two")
+        print("three")
+
+thing=MyStuff()
+print(thing.tangerine)
+print(thing.apple())
+print('lin820')
+print(MyStuff.apple(thing))
+### print(MyStuff.tangerine(thing)) #not working
+
+
+print("-----------------------end previous ex40-------------------------\n")
+
+#ex41**************
+
+import random
+from urllib.request import urlopen
+import sys
+
+WORD_URL = "http://learncodethehardway.org/words.txt"
+
+WORDS = []
+
+PHRASES = {"class%%%(%%%):":"Make a class named %%% that is-a %%%.",
+            "class%%%(object):\n\tdef__init__(self,***):":"class %%% has-a __init__ that takes self and *** params",
+            "class %%%(object)\n\tdef***(self,@@@):":"class %%% has-a function *** that takes self and @@@ params",
+            "*** = %%%()":"set *** to an instance of class %%%.",
+            "***.***(@@@)":"from *** get the *** function, call it with params self, @@@",
+            "***.***='***'":"from *** get the *** attribute and set it to '***'."}
+
+#do they want to drill phrases first
+if len(sys.argv) == 2 and sys.argv[1] == "english":
+    PHRASE_FIRST = True
+else:
+    PHRASE_FIRST = False
+
+#load up the words from the website
+for word in urlopen(WORD_URL).readlines():
+    WORDS.append(str(word.strip(),encoding="utf-8"))
+
+def convert(snippet,phrase):
+    class_names=[w.capitalize() for w in random.sample(WORDS,snippet.count("%%%"))]
+    other_names=random.sample(WORDS,snippet.count("***"))
+    results=[]
+    param_names=[]
+    for i in range(0,snippet.count("@@@")):
+        param_count=random.randint(1,3)
+        param_names.append(', '.join(random.sample(WORDS,param_count)))
+    for sentence in snippet,phrase:
+        result=sentence[:]
+        #fake class name
+        for word in class_names:
+            result.replace("%%%",word,1)
+        #fake other names
+        for word in other_names:
+            result.replace("***",word,1)
+        #fake params list
+        for word in param_names:
+            result.replace("@@@",word,1)
+        results.append(result)
+    return results
+
+#keep going untill they hit CTRL-D
+try:
+    while True:
+        snippets = list(PHRASES.keys())
+        random.shuffle(snippets)
+        for snippet in snippets:
+            phrase=PHRASES[snippet]
+            question,answer=convert(snippet,phrase)
+            if PHRASE_FIRST:question,answer=answer,question
+            print(question)
+            input("< ")
+            print(f"ANSWER: {answer}\n\n")
+except EOFError:
+    print("\nBye")
